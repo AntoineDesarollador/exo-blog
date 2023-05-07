@@ -1,0 +1,23 @@
+h1{
+    color: gold;
+    text-align: center;
+    font-size: 60px;
+    border: 4px inset darkred;
+    width: 50%;
+    margin: 30px auto;
+    border-radius: 5px;
+    background-color: rgb(244, 244, 244);
+}
+
+h2{
+    margin: 50px 30px;
+}
+
+section .article{
+    display: flex;
+
+}
+
+article {
+    width: 40%;
+}
