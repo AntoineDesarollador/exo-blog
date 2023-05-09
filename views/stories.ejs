@@ -8,13 +8,13 @@
 
             <a href="/story/<%= story.id %>">
 
-                <article>
-                    
+                <article>       
                     <h3><%= story.storyTitle  %></h3>
                     <img src="/img/<%= story.url %>" alt="">
                     <p><%= story.content  %></p>
                     <p><em>écrit par : <%= story.alias %> le <%= story.storyDate.toLocaleDateString() %> à <%= story.storyDate.toLocaleTimeString() %></em></p>
                 </article>
+                
             </a>
                 
         <% } %>

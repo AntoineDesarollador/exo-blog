@@ -30,10 +30,16 @@ app
 // j'affiche 3 stories uniquement
 app.get("/", async (req, res) => {
     const [result] = await pool.execute(`
-        SELECT title, content, date 
-        FROM story
-        LIMIT 3        
+
+    SELECT alias, title, content, date 
+    FROM story
+    JOIN user 
+    ON story.id_user = user.id
+
+        
     `);
+
+    console.log(result)
     res.render( "layout", {
         template: "home",
         stories: result,
@@ -46,7 +52,7 @@ app.get("/", async (req, res) => {
 app.get("/stories", async (req, res)=>{
     try {
         const [result] = await pool.execute(`
-        SELECT story.title AS storyTitle, content, date AS storyDate, alias, category.title AS categoryTitle, url
+        SELECT  story.title AS storyTitle,  content, date AS storyDate, alias, category.title AS categoryTitle, url
         FROM story
         JOIN user ON story.id_user = user.id
         JOIN category_story ON story.id = category_story.id_story
@@ -54,10 +60,10 @@ app.get("/stories", async (req, res)=>{
         JOIN photo ON story.id = photo.id_story
 
         `);
-
+        console.log(result)
         res.render("layout", {
             template: "stories",
-            stories: result
+            stories: result,
         });
 
     } catch (error) {

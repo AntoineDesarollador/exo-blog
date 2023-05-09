@@ -9,6 +9,9 @@
     <title>Document</title>
 </head>
 
+<body>
+    
+
 <main id="home">
     <section>
         <h2>Voici une selection de mes stories mes petits chatons</h2>
@@ -17,8 +20,12 @@
             <article>
                 <h3><%= story.title %></h3>
                 <p><%= story.content %></p>
-                <p>posté le : <%= story.date.toLocaleDateString() %> à <%= story.date.toLocaleTimeString() %></p>
+                <p>écrit par : <%= story.alias %> posté le : <%= story.date.toLocaleDateString() %> à <%= story.date.toLocaleTimeString() %></p>
             </article>
         <% } %>
     </section>
 </main>
+
+</body>
+
+</html>
