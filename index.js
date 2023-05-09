@@ -58,6 +58,7 @@ app.get("/stories", async (req, res)=>{
         JOIN category_story ON story.id = category_story.id_story
         JOIN category ON category_story.id_category = category.id
         JOIN photo ON story.id = photo.id_story
+       
 
         `);
         console.log(result)

@@ -13,11 +13,62 @@ h2{
     margin: 50px 30px;
 }
 
+header nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    border-bottom: 2px solid rgb(217, 217, 217);
+}
+
+header nav a{
+    text-decoration: none;
+    font-size: 20px;
+    color: black;   
+}
+
+header nav a:hover{
+    text-decoration: underline;
+    font-size: 21px;
+    color: rgb(86, 0, 0);
+    font-weight: bold;
+    
+}
+
 section .article{
     display: flex;
 
 }
 
 article {
-    width: 40%;
+    width: 35%;
 }
+
+#stories-article {
+    text-align: center;
+    margin: 0px;
+    width: 100%;
+}
+
+#stories-section{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#stories-section h2 {
+    width: 100%;
+    text-align: center;
+}
+
+#stories-section a {
+    text-decoration: none;
+    color: black;
+    width: 40%;
+    margin: 20px auto;
+}
+
+#stories-article img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
