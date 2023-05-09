@@ -94,7 +94,7 @@ app.get("/story/:id", async (req, res) => {
 
         res.render("layout", {
             template: "story",
-            story: resultStory[0],
+            story: resultStory[4],
             commentaries: resultCom,
         });
 
