@@ -1,4 +1,5 @@
-import Query from "../model/index.js";
+import bcrypt from "bcrypt";
+const saltRounds = 10;
 
 const entry = async (req, res) => {
     if(req.query.sign === "in" || req.query.sign === "up") {
@@ -7,19 +8,28 @@ const entry = async (req, res) => {
              req.session.destroy();    
              res.redirect(301, "/");
          }
-         else next();
+         else next()
+         console.log("hola");;
      
-
+      
     try {
                  const { alias, email, password } = req.body;
+                 
                  const query = `INSERT INTO user (alias, email, pwd, regDate, id_role) VALUES (?, ?, ?, now(), 3 )`;
+                 console.log(query);
+                 
                  const hashPWD = await bcrypt.hash(password, saltRounds);
+                 console.log(hashPWD);
+                
                  await pool.execute(query, [alias, email, hashPWD]);
                 
+               
 
+               
+               
                   // invoquer la méthode traitant la requête SQL
                  
-
+     
                  
              res.status(200).render("layout", {template: "user/entry", sign: "in", msg: null});
 
@@ -31,6 +41,7 @@ const entry = async (req, res) => {
                  // ... traitements d'autres messages d'erreurs
              }    
          };
+      
 
 
 

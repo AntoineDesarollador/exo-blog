@@ -6,9 +6,9 @@ const app = express();
 const PORT = process.env.PORT || process.env.LOCAL_PORT;
 
 // replacer dans le fichier requis !!!!!!
-import bcrypt from "bcrypt";
+
 import router from "./router/index.js";
-const saltRounds = 10;
+
 
 // configurer les views ( moteur de rendu)
 app.set("views", "./views").set("view engine", "ejs");

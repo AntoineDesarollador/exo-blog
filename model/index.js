@@ -1,6 +1,7 @@
 import { pool } from "../config/database.js";
 
 
+
 class Query{
 
     static async find(query) {
