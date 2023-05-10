@@ -2,9 +2,11 @@
 
 <main id="story">
 
-    <section>
-        <h2>Toutes mes stories !</h2>
+    <section id="story-section">
+        <h2>Fiche série</h2>
 
+        
+        
 
             <article>
                 
@@ -14,6 +16,8 @@
                 
             </article>
 
+
+            <section id="commentaire">
             <aside>
 
                 <% for(const com of commentaries) { %>
@@ -25,17 +29,28 @@
 
             </aside>
 
+            
             <form action="/comment/send/<%= story.id %>" method="post">
-
-                <input type="text" name="alias" id="alias" placeholder="alias" aria-placeholder="Entrer votre alias">
-
-                <textarea name="msg" id="msg" cols="30" rows="10" placeholder="votre message" aria-placeholder="Entrer votre message"></textarea>
-
-                <input type="submit" value="send">
-
+                <input
+                    type="text"
+                    name="alias"
+                    id="alias"
+                    placeholder="alias"
+                    aria-placeholder="Entrer votre alias"
+                />
+    
+                <textarea
+                    name="msg"
+                    id="msg"
+                    cols="30"
+                    rows="10"
+                    placeholder="votre message"
+                    aria-placeholder="Entrer votre message"
+                ></textarea>
+    
+                <input id="sendbtn" type="submit" value="send" />
             </form>
-
-
+            </section>
 
     </section>
 

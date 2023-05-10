@@ -1,3 +1,5 @@
+
+
 h1{
     color: gold;
     text-align: center;
@@ -11,6 +13,7 @@ h1{
 
 h2{
     margin: 50px 30px;
+    width: 100%;
 }
 
 header nav {
@@ -62,13 +65,71 @@ article {
 #stories-section a {
     text-decoration: none;
     color: black;
-    width: 40%;
+    width: 45%;
     margin: 20px auto;
 }
 
 #stories-article img {
     width: 100%;
     height: 450px;
-    object-fit: contain;
+
 }
 
+
+#story-section{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    align-items: center;
+    background-color: black;
+}
+
+#story-section h2 {
+    color: goldenrod;
+    text-align: center;
+    font-size: 30px;
+    border: 5px inset lightgoldenrodyellow;
+    padding: 20px;
+}
+
+#story-section article {
+    width: 55%;
+    margin-right: 20px;
+}
+
+#story-section article h3 {
+    text-align: center;
+    color: goldenrod;
+}
+
+#story-section img{
+    width: 100%;
+    
+}
+#commentaire {
+    width: 30%;
+
+}
+
+#commentaire dl dt{
+    color: rgb(225, 225, 225);  
+}
+
+#commentaire dd{
+    color: whitesmoke;
+    font-size: 17px;
+    margin-top: 7px;
+    font-weight: bold;
+}
+
+
+
+form textarea {
+    margin-top: 10px;
+}
+
+#sendbtn {
+    color: gold;
+    background-color: black;
+    border: 3px outset rgb(106, 106, 106);
+}
